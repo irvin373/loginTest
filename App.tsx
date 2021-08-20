@@ -35,9 +35,9 @@ HomeScreen.options = {
   },
 };
 
-Navigation.registerComponent('Home', () => HomeScreen);
-Navigation.registerComponent('Home.screen', () => HOME);
+Navigation.registerComponent('App', () => HomeScreen);
 Navigation.registerComponent('Login.screen', () => LoginScreen);
+Navigation.registerComponent('Home.screen', () => HOME);
 
 Navigation.events().registerAppLaunchedListener(async () => {
   Navigation.setRoot({
@@ -46,7 +46,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
         children: [
           {
             component: {
-              name: 'Home',
+              name: 'App',
             },
           },
         ],
