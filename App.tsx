@@ -12,6 +12,7 @@ const HomeScreen = props => {
           Navigation.push(props.componentId, {
             component: {
               name: 'Login.screen',
+              passProps: {msg: 'hola desde el home'}
             },
           });
         }}
