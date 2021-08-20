@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
+import { Navigation } from 'react-native-navigation';
 import UselessTextInput from '../components/Input';
 // import {Navigation} from 'react-native-navigation';
 
@@ -14,7 +15,17 @@ const LoginScreen = (props: Props) => {
       <Text>{props.msg}</Text>
       <UselessTextInput />
       <Button onPress={() => {
-
+        Navigation.showModal({
+          stack: {
+            children: [
+              {
+                component: {
+                  name: 'Home.screen',
+                },
+              },
+            ],
+          },
+        });
       }} title={'Login'} />
     </View>
   );

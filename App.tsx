@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 import LoginScreen from './src/screens/Login.screen';
+import HOME from './src/screens/Home.screen';
 
 const HomeScreen = props => {
   return (
@@ -35,6 +36,7 @@ HomeScreen.options = {
 };
 
 Navigation.registerComponent('Home', () => HomeScreen);
+Navigation.registerComponent('Home.screen', () => HOME);
 Navigation.registerComponent('Login.screen', () => LoginScreen);
 
 Navigation.events().registerAppLaunchedListener(async () => {
